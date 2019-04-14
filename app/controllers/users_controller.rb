@@ -32,6 +32,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def deregister
+    begin
+      if authorize_request
+        @current_user.destroy
+        render status: :no_content
+      else
+        render status: :unauthorized
+      end
+    rescue
+      render status: :unprocessable_entity
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def get_email

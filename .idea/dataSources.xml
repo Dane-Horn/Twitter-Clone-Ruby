@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails Twitter-Clone-Ruby: test" uuid="8ce52aff-50db-4c98-91d7-7c20c93dca56">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/Twitter-Clone-Ruby_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails Twitter-Clone-Ruby: development" uuid="b896478b-ef8b-4910-b2dd-705af21168a0">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/twitter-ruby</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails Twitter-Clone-Ruby: production" uuid="00cc990a-57d4-4dd2-83d3-5a6d4e3f1532">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/Twitter-Clone-Ruby_production</jdbc-url>
+    </data-source>
+  </component>
+</project>
