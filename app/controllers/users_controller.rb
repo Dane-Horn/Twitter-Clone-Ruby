@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   #before_action :set_user, only: [:show, :update, :destroy]
   def register
+    puts user_params
     @user = User.new(user_params)
     set_id UUIDTools::UUID.random_create
     @user.save
