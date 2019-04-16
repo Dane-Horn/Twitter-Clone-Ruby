@@ -48,7 +48,8 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def get_email
+  get tweets(:id)
+  def get_email
       @user.email
     end
     def get_id

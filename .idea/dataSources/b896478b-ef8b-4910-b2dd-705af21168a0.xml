@@ -49,10 +49,10 @@
       <ObjectId>41499</ObjectId>
       <StateNumber>1834</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1954</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1986</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
-      <Relations>sequence|table|41689|41691|1
+      <Relations>sequence|table|41745|41747|1
 </Relations>
     </database>
     <role id="11" parent="1" name="pg_monitor">
@@ -123,7 +123,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>351</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1955</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1987</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -184,9 +184,9 @@
       <SchemaId>11</SchemaId>
     </extension>
     <sequence id="30" parent="22" name="follows_id_seq">
-      <ObjectId>41689</ObjectId>
+      <ObjectId>41745</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1953</StateNumber>
+      <StateNumber>1969</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
@@ -197,262 +197,350 @@
       <StateNumber>1836</StateNumber>
     </table>
     <table id="32" parent="22" name="follows">
-      <ObjectId>41691</ObjectId>
+      <ObjectId>41747</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1953</StateNumber>
+      <StateNumber>1969</StateNumber>
     </table>
-    <table id="33" parent="22" name="schema_migrations">
+    <table id="33" parent="22" name="retweets">
+      <ObjectId>41770</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1981</StateNumber>
+    </table>
+    <table id="34" parent="22" name="schema_migrations">
       <ObjectId>41500</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1835</StateNumber>
     </table>
-    <table id="34" parent="22" name="tweets">
-      <ObjectId>41660</ObjectId>
+    <table id="35" parent="22" name="tweets">
+      <ObjectId>41734</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1914</StateNumber>
+      <StateNumber>1968</StateNumber>
     </table>
-    <table id="35" parent="22" name="users">
-      <ObjectId>41640</ObjectId>
+    <table id="36" parent="22" name="users">
+      <ObjectId>41726</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1908</StateNumber>
+      <StateNumber>1969</StateNumber>
     </table>
-    <column id="36" parent="31" name="key">
+    <column id="37" parent="31" name="key">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1836</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="37" parent="31" name="value">
+    <column id="38" parent="31" name="value">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1836</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="38" parent="31" name="created_at">
+    <column id="39" parent="31" name="created_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1836</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="39" parent="31" name="updated_at">
+    <column id="40" parent="31" name="updated_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1836</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="40" parent="31" name="ar_internal_metadata_pkey">
+    <index id="41" parent="31" name="ar_internal_metadata_pkey">
       <ObjectId>41514</ObjectId>
       <StateNumber>1836</StateNumber>
       <ColNames>key</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="41" parent="31" name="ar_internal_metadata_pkey">
+    <key id="42" parent="31" name="ar_internal_metadata_pkey">
       <ObjectId>41515</ObjectId>
       <StateNumber>1836</StateNumber>
       <ColNames>key</ColNames>
       <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="42" parent="32" name="id">
+    <column id="43" parent="32" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1953</StateNumber>
+      <StateNumber>1969</StateNumber>
       <DefaultExpression>nextval(&apos;follows_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="43" parent="32" name="follower_id">
+    <column id="44" parent="32" name="user_id">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1953</StateNumber>
+      <StateNumber>1969</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="32" name="followee_id">
+    <column id="45" parent="32" name="followee_id">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1953</StateNumber>
+      <StateNumber>1969</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="45" parent="32" name="created_at">
+    <column id="46" parent="32" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1953</StateNumber>
+      <StateNumber>1969</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="46" parent="32" name="updated_at">
+    <column id="47" parent="32" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1953</StateNumber>
+      <StateNumber>1969</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="47" parent="32" name="follows_pkey">
-      <ObjectId>41698</ObjectId>
-      <StateNumber>1953</StateNumber>
+    <index id="48" parent="32" name="follows_pkey">
+      <ObjectId>41754</ObjectId>
+      <StateNumber>1969</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="48" parent="32" name="index_follows_on_follower_id">
-      <ObjectId>41700</ObjectId>
-      <StateNumber>1953</StateNumber>
-      <ColNames>follower_id</ColNames>
+    <index id="49" parent="32" name="index_follows_on_user_id_and_followee_id">
+      <ObjectId>41768</ObjectId>
+      <StateNumber>1969</StateNumber>
+      <ColNames>user_id
+followee_id</ColNames>
+      <Unique>1</Unique>
     </index>
-    <index id="49" parent="32" name="index_follows_on_followee_id">
-      <ObjectId>41701</ObjectId>
-      <StateNumber>1953</StateNumber>
+    <index id="50" parent="32" name="index_follows_on_user_id">
+      <ObjectId>41761</ObjectId>
+      <StateNumber>1969</StateNumber>
+      <ColNames>user_id</ColNames>
+    </index>
+    <index id="51" parent="32" name="index_follows_on_followee_id">
+      <ObjectId>41762</ObjectId>
+      <StateNumber>1969</StateNumber>
       <ColNames>followee_id</ColNames>
     </index>
-    <key id="50" parent="32" name="follows_pkey">
-      <ObjectId>41699</ObjectId>
-      <StateNumber>1953</StateNumber>
+    <key id="52" parent="32" name="follows_pkey">
+      <ObjectId>41755</ObjectId>
+      <StateNumber>1969</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>follows_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="51" parent="33" name="version">
+    <foreign-key id="53" parent="32" name="fk_rails_32479bd030">
+      <ObjectId>41756</ObjectId>
+      <StateNumber>1969</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>41726</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="54" parent="32" name="fk_rails_a8faf414f1">
+      <ObjectId>41763</ObjectId>
+      <StateNumber>1969</StateNumber>
+      <ColNames>followee_id</ColNames>
+      <RefTableId>41726</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="55" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1981</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="56" parent="33" name="tweet_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>1981</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="57" parent="33" name="user_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>1981</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="58" parent="33" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1981</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="59" parent="33" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1981</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="60" parent="33" name="retweets_pkey">
+      <ObjectId>41776</ObjectId>
+      <StateNumber>1981</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="61" parent="33" name="index_retweets_on_tweet_id">
+      <ObjectId>41778</ObjectId>
+      <StateNumber>1981</StateNumber>
+      <ColNames>tweet_id</ColNames>
+    </index>
+    <index id="62" parent="33" name="index_retweets_on_user_id">
+      <ObjectId>41779</ObjectId>
+      <StateNumber>1981</StateNumber>
+      <ColNames>user_id</ColNames>
+    </index>
+    <key id="63" parent="33" name="retweets_pkey">
+      <ObjectId>41777</ObjectId>
+      <StateNumber>1981</StateNumber>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>retweets_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="64" parent="34" name="version">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1835</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="52" parent="33" name="schema_migrations_pkey">
+    <index id="65" parent="34" name="schema_migrations_pkey">
       <ObjectId>41506</ObjectId>
       <StateNumber>1835</StateNumber>
       <ColNames>version</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="53" parent="33" name="schema_migrations_pkey">
+    <key id="66" parent="34" name="schema_migrations_pkey">
       <ObjectId>41507</ObjectId>
       <StateNumber>1835</StateNumber>
       <ColNames>version</ColNames>
       <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="54" parent="34" name="id">
+    <column id="67" parent="35" name="id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1914</StateNumber>
+      <StateNumber>1968</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="55" parent="34" name="user_id">
+    <column id="68" parent="35" name="user_id">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1914</StateNumber>
+      <StateNumber>1968</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="56" parent="34" name="tweet_id">
+    <column id="69" parent="35" name="tweet_id">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1914</StateNumber>
+      <StateNumber>1968</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="57" parent="34" name="text">
+    <column id="70" parent="35" name="text">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1914</StateNumber>
+      <StateNumber>1968</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="58" parent="34" name="likes">
+    <column id="71" parent="35" name="likes">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1914</StateNumber>
+      <StateNumber>1968</StateNumber>
       <DefaultExpression>0</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="59" parent="34" name="created_at">
+    <column id="72" parent="35" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1914</StateNumber>
+      <StateNumber>1968</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="60" parent="34" name="updated_at">
+    <column id="73" parent="35" name="updated_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1914</StateNumber>
+      <StateNumber>1968</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="61" parent="34" name="tweets_pkey">
-      <ObjectId>41667</ObjectId>
-      <StateNumber>1914</StateNumber>
+    <index id="74" parent="35" name="tweets_pkey">
+      <ObjectId>41741</ObjectId>
+      <StateNumber>1968</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="62" parent="34" name="index_tweets_on_user_id">
-      <ObjectId>41669</ObjectId>
-      <StateNumber>1914</StateNumber>
+    <index id="75" parent="35" name="index_tweets_on_user_id">
+      <ObjectId>41743</ObjectId>
+      <StateNumber>1968</StateNumber>
       <ColNames>user_id</ColNames>
     </index>
-    <index id="63" parent="34" name="index_tweets_on_tweet_id">
-      <ObjectId>41670</ObjectId>
-      <StateNumber>1914</StateNumber>
+    <index id="76" parent="35" name="index_tweets_on_tweet_id">
+      <ObjectId>41744</ObjectId>
+      <StateNumber>1968</StateNumber>
       <ColNames>tweet_id</ColNames>
     </index>
-    <key id="64" parent="34" name="tweets_pkey">
-      <ObjectId>41668</ObjectId>
-      <StateNumber>1914</StateNumber>
+    <key id="77" parent="35" name="tweets_pkey">
+      <ObjectId>41742</ObjectId>
+      <StateNumber>1968</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>tweets_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="65" parent="35" name="id">
+    <column id="78" parent="36" name="id">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1908</StateNumber>
+      <StateNumber>1967</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="66" parent="35" name="username">
+    <column id="79" parent="36" name="username">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1908</StateNumber>
+      <StateNumber>1967</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="67" parent="35" name="email">
+    <column id="80" parent="36" name="email">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1908</StateNumber>
+      <StateNumber>1967</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="68" parent="35" name="password_digest">
+    <column id="81" parent="36" name="password_digest">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>1908</StateNumber>
+      <StateNumber>1967</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="69" parent="35" name="created_at">
+    <column id="82" parent="36" name="created_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1908</StateNumber>
+      <StateNumber>1967</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="70" parent="35" name="updated_at">
+    <column id="83" parent="36" name="updated_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1908</StateNumber>
+      <StateNumber>1967</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="71" parent="35" name="users_pkey">
-      <ObjectId>41646</ObjectId>
-      <StateNumber>1908</StateNumber>
+    <index id="84" parent="36" name="users_pkey">
+      <ObjectId>41732</ObjectId>
+      <StateNumber>1967</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="72" parent="35" name="users_pkey">
-      <ObjectId>41647</ObjectId>
-      <StateNumber>1908</StateNumber>
+    <key id="85" parent="36" name="users_pkey">
+      <ObjectId>41733</ObjectId>
+      <StateNumber>1967</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>

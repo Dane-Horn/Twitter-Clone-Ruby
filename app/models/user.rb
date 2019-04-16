@@ -6,5 +6,5 @@ class User < ApplicationRecord
     has_many :tweets, dependent: :destroy
     has_many :follows, dependent: :destroy
     has_many :followees, through: 'follows'
-
+    has_many :retweets, dependent: :destroy
 end
