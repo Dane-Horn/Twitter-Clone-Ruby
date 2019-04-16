@@ -4,4 +4,7 @@ class User < ApplicationRecord
     validates_uniqueness_of :email
     validates_uniqueness_of :username
     has_many :tweets
+    has_many :follows
+    has_many :followees, through: 'follows'
+
 end
