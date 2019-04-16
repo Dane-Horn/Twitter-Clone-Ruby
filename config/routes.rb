@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
   scope '/follow' do
     post '/:id', to: 'follows#create'
+    delete '/:id', to: 'follows#destroy'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

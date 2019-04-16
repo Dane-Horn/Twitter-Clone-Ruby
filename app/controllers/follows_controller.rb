@@ -19,6 +19,20 @@ class FollowsController < ApplicationController
     end
   end
 
+  def destroy
+    if authorize_request
+      begin
+        follow = Follow.where(user_id: @current_id, followee_id: params[:id]).first
+      rescue
+        return render status: :unprocessable_entity
+      end
+      follow.destroy
+      render status: :no_content
+    else
+      render status: :unauthorized
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_follow
