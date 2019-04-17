@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   #before_action :set_user, only: [:show, :update, :destroy]
   def register
-    puts user_params
+    puts "params:", user_params
     @user = User.new(user_params)
     set_id UUIDTools::UUID.random_create
     @user.save
@@ -48,7 +48,6 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-  get tweets(:id)
   def get_email
       @user.email
     end
