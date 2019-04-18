@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     get '/me', to: 'users#me'
     delete '/deregister', to: 'users#deregister'
     get '/following', to: 'follows#follows'
+    get '/own/posts', to: 'users#own_posts'
+    get '/feed', to: 'users#feed'
   end
   scope '/tweet' do
     post '', to: 'tweets#create'

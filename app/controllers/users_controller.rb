@@ -45,6 +45,30 @@ class UsersController < ApplicationController
       render status: :unprocessable_entity
     end
   end
+  
+  def feed
+    if authorize_request
+      result = @current_user.followees.as_json(
+          except: [:password_digest, :email, :created_at, :updated_at],
+          include: [{tweets: {
+              include: :replies
+          }}, :retweets]
+      )
+      render json: result
+    else
+      render status: :unauthorized
+    end
+  end
+  
+  def own_posts
+    if authorize_request
+      tweets = Tweet.where(user_id: @current_id)
+      retweets = Retweet.where(user_id: @current_id)
+      render json: {tweets: tweets, retweets: retweets}
+    else
+      render status: :unauthorized
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
