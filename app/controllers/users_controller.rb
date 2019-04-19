@@ -48,10 +48,14 @@ class UsersController < ApplicationController
   
   def feed
     if authorize_request
-      result = @current_user.followees.as_json(
-          except: [:password_digest, :email, :created_at, :updated_at],
+      followees = @current_user.followees.includes(:tweets).where(tweets: {tweet_id: nil})
+      result = followees.as_json(
+          only: [:id, :username],
           include: [{tweets: {
-              include: :replies
+              only: [:id, :text, :likes, :created_at],
+              include: { replies: {
+                only: [:id, :tweet_id, :text, :likes, :created_at]
+              }}
           }}, :retweets]
       )
       render json: result
