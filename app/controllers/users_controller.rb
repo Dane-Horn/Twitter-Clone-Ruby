@@ -5,8 +5,19 @@ class UsersController < ApplicationController
 
 
   #before_action :set_user, only: [:show, :update, :destroy]
+  def fibo(n)
+    if n < 0
+      return 0
+    end
+    if n == 1
+      return 1
+    end
+    fibo(n-1) + fibo(n - 2)
+  end
+  def comp
+    render json: {message: fibo(30)}
+  end
   def register
-    puts "params:", user_params
     @user = User.new(user_params)
     set_id UUIDTools::UUID.random_create
     @user.save
